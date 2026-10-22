@@ -40,7 +40,9 @@ Os módulos em `src/` são pontos de partida e podem precisar ser adaptados ao f
 vibration-fault-classifier/
 ├── data/raw/           (fora do Git; só o script de download)
 ├── data/processed/     (features em CSV/parquet)
-├── notebooks/          (01_exploracao.ipynb, 02_features.ipynb ...)
+├── notebooks/
+│   ├── 01_exploracao.ipynb
+│   └── 02_features.ipynb
 ├── src/
 │   ├── download_data.py(download dos dados brutos)
 │   ├── load.py         (leitura dos .lvm)
