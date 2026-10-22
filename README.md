@@ -38,3 +38,21 @@ Os módulos em `src/` são pontos de partida e podem precisar ser adaptados ao f
 ## Dados e Git
 
 Os diretórios de dados e modelos são mantidos no repositório por meio de arquivos `.gitkeep`, mas seus conteúdos são ignorados pelo Git. Não coloque dados privados ou licenciados no repositório.
+
+## Estrutura
+
+vibration-fault-classifier/
+├── data/raw/           (fora do Git; só o script de download)
+├── data/processed/     (features em CSV/parquet)
+├── notebooks/          (01_exploracao.ipynb, 02_features.ipynb ...)
+├── src/
+│   ├── load.py         (leitura dos .lvm)
+│   ├── features.py     (extração de features)
+│   ├── train.py        (treino + avaliação, salva o modelo)
+│   └── predict.py
+├── models/             (modelo treinado .joblib)
+├── app/
+│   └── dashboard.py    (Streamlit)
+├── docs/               (relatório)
+├── requirements.txt
+└── README.md
