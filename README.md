@@ -35,10 +35,6 @@ streamlit run app/dashboard.py
 
 Os módulos em `src/` são pontos de partida e podem precisar ser adaptados ao formato real dos arquivos `.lvm` e aos rótulos de falha disponíveis.
 
-## Dados e Git
-
-Os diretórios de dados e modelos são mantidos no repositório por meio de arquivos `.gitkeep`, mas seus conteúdos são ignorados pelo Git. Não coloque dados privados ou licenciados no repositório.
-
 ## Estrutura
 
 vibration-fault-classifier/
@@ -46,6 +42,7 @@ vibration-fault-classifier/
 ├── data/processed/     (features em CSV/parquet)
 ├── notebooks/          (01_exploracao.ipynb, 02_features.ipynb ...)
 ├── src/
+│   ├── download_data.py(download dos dados brutos)
 │   ├── load.py         (leitura dos .lvm)
 │   ├── features.py     (extração de features)
 │   ├── train.py        (treino + avaliação, salva o modelo)
