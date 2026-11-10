@@ -5,7 +5,6 @@ scikit-learn
 joblib
 matplotlib
 seaborn
-streamlit
 jupyter
 tqdm
 requests
