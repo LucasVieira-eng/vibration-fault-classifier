@@ -25,18 +25,11 @@ Projeto para explorar sinais de vibração, extrair características (*features*
 4. Explore os notebooks em `notebooks/`.
 5. Implemente/execute o pipeline de features e treino conforme o formato dos seus dados.
 
-## Comandos úteis
-
-Executar o dashboard:
-
-```bash
-streamlit run app/dashboard.py
-```
-
 Os módulos em `src/` são pontos de partida e podem precisar ser adaptados ao formato real dos arquivos `.lvm` e aos rótulos de falha disponíveis.
 
 ## Estrutura
 
+```text
 vibration-fault-classifier/
 ├── data/raw/           (fora do Git; só o script de download)
 ├── data/processed/     (features em CSV/parquet)
@@ -51,7 +44,8 @@ vibration-fault-classifier/
 │   └── predict.py
 ├── models/             (modelo treinado .joblib)
 ├── app/
-│   └── dashboard.py    (Streamlit)
+│   └── dashboard.py
 ├── docs/               (relatório)
 ├── requirements.txt
 └── README.md
+```
