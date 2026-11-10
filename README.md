@@ -21,7 +21,7 @@ Projeto para explorar sinais de vibração, extrair características (*features*
    pip install -r requirements.txt
    ```
 
-3. Coloque os arquivos `.lvm` em `data/raw/`.
+3. Coloque os arquivos `.lvm` em `data/raw/`. ([https://zenodo.org/records/14388093](https://zenodo.org/records/14388093))
 4. Explore os notebooks em `notebooks/`.
 5. Implemente/execute o pipeline de features e treino conforme o formato dos seus dados.
 
