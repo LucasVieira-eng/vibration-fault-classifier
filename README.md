@@ -2,16 +2,6 @@
 
 Projeto para explorar sinais de vibração, extrair características (*features*) e treinar um classificador de falhas.
 
-## Estrutura
-
-- `data/raw/`: dados brutos (`.lvm`); não são versionados no Git.
-- `data/processed/`: features processadas em CSV ou Parquet; não são versionadas por padrão.
-- `notebooks/`: exploração e experimentos.
-- `src/`: código reutilizável para leitura, extração de features, treino e predição.
-- `models/`: modelos treinados; não são versionados por padrão.
-- `app/`: dashboard Streamlit.
-- `docs/`: relatório e documentação.
-
 ## Começar
 
 1. Crie e ative um ambiente virtual.
@@ -29,23 +19,47 @@ Os módulos em `src/` são pontos de partida e podem precisar ser adaptados ao f
 
 ## Estrutura
 
+- `data/raw/`: dados brutos (`.lvm`); não são versionados no Git.
+- `data/processed/`: features processadas em CSV ou Parquet; não são versionadas por padrão.
+- `notebooks/`: exploração e experimentos.
+- `src/`: código reutilizável para leitura, extração de features, treino e predição.
+- `models/`: modelos treinados; não são versionados por padrão.
+- `app/`: dashboard Streamlit.
+- `docs/`: relatório e documentação.
+
 ```text
 vibration-fault-classifier/
-├── data/raw/           (fora do Git; só o script de download)
-├── data/processed/     (features em CSV/parquet)
-├── notebooks/
-│   ├── 01_exploracao.ipynb
-│   └── 02_features.ipynb
-├── src/
-│   ├── download_data.py(download dos dados brutos)
-│   ├── load.py         (leitura dos .lvm)
-│   ├── features.py     (extração de features)
-│   ├── train.py        (treino + avaliação, salva o modelo)
-│   └── predict.py
-├── models/             (modelo treinado .joblib)
-├── app/
-│   └── dashboard.py
-├── docs/               (relatório)
+├── .gitignore
+├── README.md
 ├── requirements.txt
-└── README.md
+├── app/
+│   └── dashboard.py          (dashboard Streamlit para classificar um CSV de features)
+├── data/
+│   ├── raw/                  (.lvm baixados; fora do Git, só o .gitkeep)
+│   └── processed/            (features.csv gerado; fora do Git, só o .gitkeep)
+├── docs/
+│   ├── eda.md                (relatório da análise exploratória)
+│   ├── relatorio.md          (template do relatório final, ainda vazio)
+│   └── figures/
+│       └── eda/
+│           ├── acceleration_rms_by_condition.png
+│           ├── class_distribution.png
+│           ├── fft_band_rms_acc_de_h.png
+│           ├── fft_spectrum_20hz.png
+│           ├── missing_values.png
+│           ├── time_waveforms_20hz.png
+│           └── velocity_rms_by_condition.png
+├── models/                   (modelo .joblib treinado; fora do Git, só o .gitkeep)
+├── notebooks/
+│   ├── 01-exploracao.ipynb   (carrega os .lvm e inspeciona valores ausentes)
+│   ├── 02-features.ipynb     (vazio)
+│   └── 03-eda.ipynb          (EDA completa)
+└── src/
+    ├── __init__.py
+    ├── download_data.py      (baixa e extrai os zips do Zenodo)
+    ├── load.py               (lê um .lvm e adiciona type e rotation_hz)
+    ├── features.py           (extrai as estatísticas de um sinal)
+    ├── build_dataset.py      (monta e salva data/processed/features.csv)
+    ├── train.py              (treina o Random Forest e salva o modelo)
+    └── predict.py            (carrega o modelo e prediz)
 ```
