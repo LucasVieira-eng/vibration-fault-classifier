@@ -1,9 +1,8 @@
 from pathlib import Path
 from src.features import extract_features
-from src.load import COLUMNS, find_lvm_files, load_lvm
+from src.load import COLUMNS, find_lvm_files, load_lvm, PROCESSED_DIR
 import pandas as pd
 
-PROCESSED_DIR = Path(__file__).resolve().parents[1] / "data" / "processed"
 SIGNAL_COLUMNS = [c for c in COLUMNS if c.startswith(("acc_", "vel_"))]
 
 
