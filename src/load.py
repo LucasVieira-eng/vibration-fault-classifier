@@ -1,9 +1,10 @@
 from pathlib import Path
-
+import re
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
+PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 
 COLUMNS = [
     "point",
@@ -59,7 +60,20 @@ def load_lvm(file_path):
     for column in COLUMNS:
         df[column] = pd.to_numeric(df[column], errors="coerce")
 
-    return df.dropna(how="all").reset_index(drop=True)
+    df = df.dropna().reset_index(drop=True)
+
+    # Tipo de falha (ou baseline) = pasta filha de data/raw que contém o arquivo.
+    folders = file_path.relative_to(RAW_DIR).parts[:-1]
+    df["type"] = folders[0]
+
+    # Rotação (Hz) = pasta com nome no formato "<número>Hz", ex.: "20Hz".
+    df["rotation_hz"] = next(
+        int(m.group(1))
+        for part in folders
+        if (m := re.fullmatch(r"(\d+)Hz", part))
+    )
+
+    return df
 
 
 if __name__ == "__main__":
