@@ -1,6 +1,11 @@
 # Vibration Fault Classifier
 
-Projeto para explorar sinais de vibração, extrair características (*features*) e treinar um classificador de falhas.
+Projeto para classificar falhas em uma máquina rotativa a partir de sinais de vibração. Os sinais brutos (`.lvm`) são resumidos em estatísticas por arquivo (*features*), e três modelos de classificação são treinados e comparados com os mesmos protocolos de avaliação.
+
+- **Dados:** [Vibration signals of different fault conditions in a generic rotating machine](https://zenodo.org/records/14388093) (Zenodo): 1.200 sinais, 6 condições (Baseline e 5 tipos de falha) e 4 rotações (10, 20, 30 e 40 Hz).
+- **Modelos:** Random Forest, Gradient Boosting (`HistGradientBoostingClassifier`) e Regressão Logística, todos com hiperparâmetros padrão. O objetivo é comparar, não escolher um vencedor.
+- **Avaliação:** validação cruzada estratificada de 5 partes e "rotação deixada de fora" (treina em três rotações e testa na quarta).
+- **Resultado em uma frase:** os três modelos chegam a ~99% na validação cruzada, mas caem para 26–44% quando testados em uma rotação que não viram no treino. Detalhes em [`docs/relatorio.md`](docs/relatorio.md).
 
 ## Começar
 
@@ -11,55 +16,48 @@ Projeto para explorar sinais de vibração, extrair características (*features*
    pip install -r requirements.txt
    ```
 
-3. Coloque os arquivos `.lvm` em `data/raw/`. ([https://zenodo.org/records/14388093](https://zenodo.org/records/14388093))
-4. Explore os notebooks em `notebooks/`.
-5. Implemente/execute o pipeline de features e treino conforme o formato dos seus dados.
+3. Baixe os dados brutos para `data/raw/` (um `.zip` por condição, extraído em `data/raw/<condição>/<N>Hz/`):
 
-Os módulos em `src/` são pontos de partida e podem precisar ser adaptados ao formato real dos arquivos `.lvm` e aos rótulos de falha disponíveis.
+   ```bash
+   python -m src.download_data
+   ```
+
+4. Gere a tabela de features (`data/processed/features.csv`):
+
+   ```bash
+   python -m src.build_dataset
+   ```
+
+5. Compare os três modelos nos dois protocolos de avaliação:
+
+   ```bash
+   python -m src.compare_models --features all     # 64 features (todas as estatísticas)
+   python -m src.compare_models --features shape   # 40 features (só formato do sinal)
+   ```
+
+   Cada execução imprime a tabela de métricas e as matrizes de confusão, e salva a tabela em `docs/comparison_<conjunto>.csv`.
+
+Todos os comandos devem ser executados a partir da raiz do projeto, como módulo (`python -m src.<nome>`).
+
+Cada modelo também pode ser executado sozinho (`python -m src.random_forest`, `python -m src.hist_gradient_boosting`, `python -m src.logistic_regression`), o que imprime as métricas da validação cruzada de 5 partes. Para salvar um modelo treinado em `models/`, chame `build_model(save_model=True)` a partir de Python; o dashboard usa esse arquivo.
 
 ## Estrutura
 
-- `data/raw/`: dados brutos (`.lvm`); não são versionados no Git.
-- `data/processed/`: features processadas em CSV ou Parquet; não são versionadas por padrão.
-- `notebooks/`: exploração e experimentos.
-- `src/`: código reutilizável para leitura, extração de features, treino e predição.
-- `models/`: modelos treinados; não são versionados por padrão.
-- `app/`: dashboard Streamlit.
-- `docs/`: relatório e documentação.
-
 ```text
 vibration-fault-classifier/
-├── .gitignore
 ├── README.md
 ├── requirements.txt
 ├── app/
-│   └── dashboard.py          (dashboard Streamlit para classificar um CSV de features)
+│   └── dashboard.py            (dashboard Streamlit: classifica um CSV de features com um modelo salvo)
 ├── data/
-│   ├── raw/                  (.lvm baixados; fora do Git, só o .gitkeep)
-│   └── processed/            (features.csv gerado; fora do Git, só o .gitkeep)
+│   ├── raw/                    (.lvm baixados; fora do Git)
+│   └── processed/              (features.csv gerado; fora do Git)
 ├── docs/
-│   ├── eda.md                (relatório da análise exploratória)
-│   ├── relatorio.md          (template do relatório final, ainda vazio)
-│   └── figures/
-│       └── eda/
-│           ├── acceleration_rms_by_condition.png
-│           ├── class_distribution.png
-│           ├── fft_band_rms_acc_de_h.png
-│           ├── fft_spectrum_20hz.png
-│           ├── missing_values.png
-│           ├── time_waveforms_20hz.png
-│           └── velocity_rms_by_condition.png
-├── models/                   (modelo .joblib treinado; fora do Git, só o .gitkeep)
+│   ├── eda.md                  (análise exploratória dos sinais)
+│   ├── relatorio.md            (metodologia, resultados e limitações)
+│   ├── comparison_all.csv      (métricas: 64 features, sem rotation_hz)
+│   ├── comparison_shape.csv    (métricas: 40 features de formato)
+│   ├── comparison_all_with_hz.csv  (métricas: 64 features + rotation_hz)
+│   └── figures/eda/            (figuras da EDA)
+├── models/                     (modelos .joblib treinados; fora do Git)
 ├── notebooks/
-│   ├── 01-exploracao.ipynb   (carrega os .lvm e inspeciona valores ausentes)
-│   ├── 02-features.ipynb     (vazio)
-│   └── 03-eda.ipynb          (EDA completa)
-└── src/
-    ├── __init__.py
-    ├── download_data.py      (baixa e extrai os zips do Zenodo)
-    ├── load.py               (lê um .lvm e adiciona type e rotation_hz)
-    ├── features.py           (extrai as estatísticas de um sinal)
-    ├── build_dataset.py      (monta e salva data/processed/features.csv)
-    ├── train.py              (treina o Random Forest e salva o modelo)
-    └── predict.py            (carrega o modelo e prediz)
-```
