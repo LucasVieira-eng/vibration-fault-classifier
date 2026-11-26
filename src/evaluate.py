@@ -98,3 +98,19 @@ def leave_one_group_out(model, X, y, groups) -> dict:
         "f1_macro_mean": float(per_group["f1_macro"].mean()),
         "confusion_matrix": pd.DataFrame(matrix, index=labels, columns=labels),
     }
+
+def to_shape_features(X: pd.DataFrame) -> pd.DataFrame:
+    """Mantém só features de forma (sem unidade), que não crescem com a amplitude.
+
+    Por canal: skewness, kurtosis, fator de crista (peak/rms), fator de forma
+    (rms/mean_abs) e fator de impulso (peak/mean_abs).
+    """
+    channels = [c[: -len("_rms")] for c in X.columns if c.endswith("_rms")]
+    shape = pd.DataFrame(index=X.index)
+    for ch in channels:
+        shape[f"{ch}_skewness"] = X[f"{ch}_skewness"]
+        shape[f"{ch}_kurtosis"] = X[f"{ch}_kurtosis"]
+        shape[f"{ch}_crest"] = X[f"{ch}_peak"] / X[f"{ch}_rms"]
+        shape[f"{ch}_shape"] = X[f"{ch}_rms"] / X[f"{ch}_mean_abs"]
+        shape[f"{ch}_impulse"] = X[f"{ch}_peak"] / X[f"{ch}_mean_abs"]
+    return shape
