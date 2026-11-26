@@ -12,6 +12,9 @@ from src.evaluate import cross_validate_model, load_xy
 
 pd.set_option("display.max_columns", None)
 
+def make_model():
+    return RandomForestClassifier(n_estimators=200, random_state=42)
+
 def build_model(
     csv_path: str | Path = FEATURES_CSV,
     target_column: str = TARGET_COLUMN,

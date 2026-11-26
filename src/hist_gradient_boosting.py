@@ -10,6 +10,8 @@ pd.set_option("display.max_columns", None)
 
 MODEL_PATH = MODELS_DIR / "hist_gradient_boosting.joblib"
 
+def make_model():
+    return HistGradientBoostingClassifier(random_state=42)
 
 def build_model(
     csv_path: str | Path = FEATURES_CSV,

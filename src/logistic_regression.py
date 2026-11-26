@@ -14,6 +14,9 @@ pd.set_option("display.max_columns", None)
 
 MODEL_PATH = MODELS_DIR / "logistic_regression.joblib"
 
+def make_model():
+    return make_pipeline(StandardScaler(), LogisticRegression(max_iter=2000))
+
 def build_model(
     csv_path: str | Path = FEATURES_CSV,
     target_column: str = TARGET_COLUMN,
