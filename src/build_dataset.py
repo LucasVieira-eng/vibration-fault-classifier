@@ -1,7 +1,7 @@
 from pathlib import Path
 from src.features import extract_features
 from src.load import find_lvm_files, load_lvm
-from config import COLUMNS, PROCESSED_DIR
+from src.config import COLUMNS, PROCESSED_DIR
 import pandas as pd
 
 SIGNAL_COLUMNS = [c for c in COLUMNS if c.startswith(("acc_", "vel_"))]

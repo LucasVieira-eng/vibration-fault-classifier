@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 import pandas as pd
-from config import PROJECT_ROOT, RAW_DIR, PROCESSED_DIR, COLUMNS
+from src.config import RAW_DIR, PROCESSED_DIR, COLUMNS
 
 def find_lvm_files():
     """Encontra todos os arquivos .lvm dentro de data/raw."""

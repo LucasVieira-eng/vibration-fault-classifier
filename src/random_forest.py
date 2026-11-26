@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.model_selection import train_test_split
-from config import FEATURES_CSV, MODEL_PATH, TARGET_COLUMN
+from src.config import FEATURES_CSV, MODEL_PATH, TARGET_COLUMN
 
 
 def train(

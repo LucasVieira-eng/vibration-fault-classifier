@@ -2,7 +2,7 @@
 
 import sys
 from pathlib import Path
-from config import MODEL_PATH
+from src.config import MODEL_PATH
 import pandas as pd
 import streamlit as st
 
