@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from src.config import FEATURES_CSV, MODEL_PATH, TARGET_COLUMN
 
 
-def train(
+def build_model(
     csv_path: str | Path = FEATURES_CSV,
     target_column: str = TARGET_COLUMN,
     model_path: str | Path = MODEL_PATH,
@@ -42,11 +42,11 @@ def train(
 
     print(f"Acurácia: {accuracy_score(y_test, predictions):.4f}")
     print(classification_report(y_test, predictions, zero_division=0))
-
-    model_path = Path(model_path)
-    model_path.parent.mkdir(parents=True, exist_ok=True)
-    joblib.dump({"model": model, "feature_columns": list(X.columns)}, model_path)
-    print(f"Modelo salvo em: {model_path}")
+    if __name__ == "__main__":
+        model_path = Path(model_path)
+        model_path.parent.mkdir(parents=True, exist_ok=True)
+        joblib.dump({"model": model, "feature_columns": list(X.columns)}, model_path)
+        print(f"Modelo salvo em: {model_path}")
     return model
 
 
@@ -56,4 +56,4 @@ if __name__ == "__main__":
     parser.add_argument("--target", default=TARGET_COLUMN, help="Nome da coluna-alvo")
     parser.add_argument("--model", default=MODEL_PATH)
     args = parser.parse_args()
-    train(args.csv, args.target, args.model)
+    build_model(args.csv, args.target, args.model)
