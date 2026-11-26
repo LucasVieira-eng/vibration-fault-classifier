@@ -28,7 +28,7 @@ def build_model(
 
     if show_results:
         print(results)
-    elif save_model:
+    if save_model:
         model_path = Path(model_path)
         model_path.parent.mkdir(parents=True, exist_ok=True)
         joblib.dump({"model": model, "feature_columns": list(X.columns)}, model_path)
