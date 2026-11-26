@@ -1,4 +1,3 @@
-"""Dashboard inicial para testar predições a partir de um CSV de features."""
 
 import sys
 from pathlib import Path
