@@ -21,6 +21,7 @@ def build_model(
 
     data = data.dropna(subset=[target_column])
     X = data.drop(columns=[target_column])
+    X = data.drop(columns=["rotation_hz"])
     X = X.select_dtypes(include="number")
     y = data[target_column]
 
@@ -38,15 +39,17 @@ def build_model(
         n_estimators=200, random_state=42, class_weight="balanced"
     )
     model.fit(X_train, y_train)
-    predictions = model.predict(X_test)
 
-    print(f"Acurácia: {accuracy_score(y_test, predictions):.4f}")
-    print(classification_report(y_test, predictions, zero_division=0))
     if __name__ == "__main__":
+        predictions = model.predict(X_test)
+        print(f"Acurácia: {accuracy_score(y_test, predictions):.4f}")
+        print(classification_report(y_test, predictions, zero_division=0))
+    else:
         model_path = Path(model_path)
         model_path.parent.mkdir(parents=True, exist_ok=True)
         joblib.dump({"model": model, "feature_columns": list(X.columns)}, model_path)
         print(f"Modelo salvo em: {model_path}")
+
     return model
 
 
