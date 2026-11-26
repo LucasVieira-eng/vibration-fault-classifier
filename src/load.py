@@ -1,25 +1,7 @@
 from pathlib import Path
 import re
 import pandas as pd
-
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-RAW_DIR = PROJECT_ROOT / "data" / "raw"
-PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
-
-COLUMNS = [
-    "point",
-    "time",
-    "trigger",
-    "acc_de_h",
-    "acc_de_v",
-    "acc_nde_h",
-    "acc_nde_v",
-    "vel_de_h",
-    "vel_de_v",
-    "vel_nde_h",
-    "vel_nde_v",
-]
-
+from config import PROJECT_ROOT, RAW_DIR, PROCESSED_DIR, COLUMNS
 
 def find_lvm_files():
     """Encontra todos os arquivos .lvm dentro de data/raw."""

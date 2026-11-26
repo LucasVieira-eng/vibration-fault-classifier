@@ -2,7 +2,7 @@
 
 import sys
 from pathlib import Path
-
+from config import MODEL_PATH
 import pandas as pd
 import streamlit as st
 
@@ -17,9 +17,6 @@ st.set_page_config(page_title="Vibration Fault Classifier", layout="wide")
 st.title("Vibration Fault Classifier")
 st.write("Envie um CSV com as features numéricas esperadas pelo modelo treinado.")
 
-model_path = st.text_input(
-    "Caminho do modelo", "models/vibration_fault_model.joblib"
-)
 uploaded = st.file_uploader("CSV de features", type=["csv"])
 
 if uploaded is not None:
@@ -29,7 +26,7 @@ if uploaded is not None:
 
     if st.button("Classificar"):
         try:
-            predictions = predict(features, model_path)
+            predictions = predict(features, MODEL_PATH)
             result = features.copy()
             result["predicted_fault"] = predictions
             st.subheader("Predições")

@@ -7,12 +7,13 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
 from sklearn.model_selection import train_test_split
+from config import FEATURES_CSV, MODEL_PATH, TARGET_COLUMN
 
 
 def train(
-    csv_path: str | Path,
-    target_column: str,
-    model_path: str | Path = "models/vibration_fault_model.joblib",
+    csv_path: str | Path = FEATURES_CSV,
+    target_column: str = TARGET_COLUMN,
+    model_path: str | Path = MODEL_PATH,
 ):
     data = pd.read_csv(csv_path)
     if target_column not in data.columns:
@@ -51,10 +52,8 @@ def train(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--csv", required=True, help="CSV com features e rótulo")
-    parser.add_argument("--target", required=True, help="Nome da coluna-alvo")
-    parser.add_argument(
-        "--model", default="models/vibration_fault_model.joblib"
-    )
+    parser.add_argument("--csv", default=FEATURES_CSV, help="CSV com features e rótulo")
+    parser.add_argument("--target", default=TARGET_COLUMN, help="Nome da coluna-alvo")
+    parser.add_argument("--model", default=MODEL_PATH)
     args = parser.parse_args()
     train(args.csv, args.target, args.model)
