@@ -90,7 +90,7 @@ with overview:
     metric = st.radio("Métrica", ["Acurácia", "F1 macro"], horizontal=True)
     chart = metrics.copy()
     chart["Série"] = chart["Conjunto"] + " · " + chart["Modelo"]
-    fig, ax = plt.subplots(figsize=(12, 5))
+    fig, ax = plt.subplots(figsize=(12, 8))
     sns.barplot(data=chart, x="Série", y=metric, hue="Protocolo", errorbar=None, ax=ax)
     ax.set_ylim(0, 1.05)
     ax.set_xlabel("")
