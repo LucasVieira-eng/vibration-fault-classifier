@@ -1,0 +1,739 @@
+feature_set,n_features,protocol,split,model,class,precision,recall,f1,support
+all,64,stratified_5fold,pooled,Random Forest,Baseline,1.0,1.0,1.0,200
+all,64,stratified_5fold,pooled,Random Forest,Bearing,1.0,1.0,1.0,200
+all,64,stratified_5fold,pooled,Random Forest,Bearing+Unbalance,1.0,1.0,1.0,200
+all,64,stratified_5fold,pooled,Random Forest,Misalignment_NDE,1.0,1.0,1.0,200
+all,64,stratified_5fold,pooled,Random Forest,Unbalance_DE,1.0,0.99,0.9949748743718593,200
+all,64,stratified_5fold,pooled,Random Forest,Unbalance_NDE,0.9900990099009901,1.0,0.9950248756218906,200
+all,64,leave_one_rotation_out,10Hz,Random Forest,Baseline,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Random Forest,Bearing,0.1976284584980237,1.0,0.33003300330033003,50
+all,64,leave_one_rotation_out,10Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Random Forest,Misalignment_NDE,1.0,0.92,0.9583333333333334,50
+all,64,leave_one_rotation_out,10Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Random Forest,Baseline,0.3937007874015748,1.0,0.5649717514124294,50
+all,64,leave_one_rotation_out,20Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Random Forest,Bearing+Unbalance,0.09090909090909091,0.1,0.09523809523809523,50
+all,64,leave_one_rotation_out,20Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+all,64,leave_one_rotation_out,20Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Random Forest,Baseline,0.3333333333333333,1.0,0.5,50
+all,64,leave_one_rotation_out,30Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+all,64,leave_one_rotation_out,30Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Random Forest,Unbalance_NDE,1.0,1.0,1.0,50
+all,64,leave_one_rotation_out,40Hz,Random Forest,Baseline,0.2857142857142857,0.08,0.125,50
+all,64,leave_one_rotation_out,40Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,40Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,40Hz,Random Forest,Misalignment_NDE,0.17482517482517482,1.0,0.2976190476190476,50
+all,64,leave_one_rotation_out,40Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,40Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,pooled,Random Forest,Baseline,0.35738831615120276,0.52,0.42362525458248473,200
+all,64,leave_one_rotation_out,pooled,Random Forest,Bearing,0.1557632398753894,0.25,0.19193857965451055,200
+all,64,leave_one_rotation_out,pooled,Random Forest,Bearing+Unbalance,0.08928571428571429,0.025,0.0390625,200
+all,64,leave_one_rotation_out,pooled,Random Forest,Misalignment_NDE,0.4537037037037037,0.98,0.620253164556962,200
+all,64,leave_one_rotation_out,pooled,Random Forest,Unbalance_DE,0.0,0.0,0.0,200
+all,64,leave_one_rotation_out,pooled,Random Forest,Unbalance_NDE,1.0,0.25,0.4,200
+all,64,stratified_5fold,pooled,Hist Gradient Boosting,Baseline,1.0,0.995,0.9974937343358395,200
+all,64,stratified_5fold,pooled,Hist Gradient Boosting,Bearing,1.0,0.995,0.9974937343358395,200
+all,64,stratified_5fold,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.9950248756218906,1.0,0.9975062344139651,200
+all,64,stratified_5fold,pooled,Hist Gradient Boosting,Misalignment_NDE,0.9950248756218906,1.0,0.9975062344139651,200
+all,64,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_DE,0.98989898989899,0.98,0.9849246231155779,200
+all,64,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_NDE,0.9801980198019802,0.99,0.9850746268656716,200
+all,64,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Baseline,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing,0.3546099290780142,1.0,0.5235602094240838,50
+all,64,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Misalignment_NDE,0.4166666666666667,0.9,0.569620253164557,50
+all,64,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Baseline,0.43103448275862066,1.0,0.6024096385542169,50
+all,64,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing+Unbalance,0.35714285714285715,0.8,0.49382716049382713,50
+all,64,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,50
+all,64,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Baseline,0.32051282051282054,1.0,0.4854368932038835,50
+all,64,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,0.58,0.7341772151898734,50
+all,64,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_NDE,1.0,0.88,0.9361702127659575,50
+all,64,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Baseline,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing,0.1780821917808219,0.52,0.2653061224489796,50
+all,64,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Misalignment_NDE,0.3448275862068966,1.0,0.5128205128205128,50
+all,64,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,pooled,Hist Gradient Boosting,Baseline,0.36764705882352944,0.5,0.423728813559322,200
+all,64,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing,0.24675324675324675,0.38,0.2992125984251969,200
+all,64,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.25477707006369427,0.2,0.22408963585434175,200
+all,64,leave_one_rotation_out,pooled,Hist Gradient Boosting,Misalignment_NDE,0.5240963855421686,0.87,0.6541353383458647,200
+all,64,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,200
+all,64,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_NDE,0.6111111111111112,0.22,0.3235294117647059,200
+all,64,stratified_5fold,pooled,Logistic Regression,Baseline,1.0,1.0,1.0,200
+all,64,stratified_5fold,pooled,Logistic Regression,Bearing,1.0,1.0,1.0,200
+all,64,stratified_5fold,pooled,Logistic Regression,Bearing+Unbalance,1.0,1.0,1.0,200
+all,64,stratified_5fold,pooled,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,200
+all,64,stratified_5fold,pooled,Logistic Regression,Unbalance_DE,0.9846938775510204,0.965,0.9747474747474747,200
+all,64,stratified_5fold,pooled,Logistic Regression,Unbalance_NDE,0.9656862745098039,0.985,0.9752475247524752,200
+all,64,leave_one_rotation_out,10Hz,Logistic Regression,Baseline,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Logistic Regression,Bearing,0.5,1.0,0.6666666666666666,50
+all,64,leave_one_rotation_out,10Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Logistic Regression,Misalignment_NDE,1.0,0.12,0.21428571428571427,50
+all,64,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_NDE,0.30303030303030304,1.0,0.46511627906976744,50
+all,64,leave_one_rotation_out,20Hz,Logistic Regression,Baseline,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Logistic Regression,Bearing+Unbalance,0.08,0.36,0.13090909090909092,50
+all,64,leave_one_rotation_out,20Hz,Logistic Regression,Misalignment_NDE,1.0,0.68,0.8095238095238095,50
+all,64,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Logistic Regression,Baseline,0.24615384615384617,0.32,0.2782608695652174,50
+all,64,leave_one_rotation_out,30Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Logistic Regression,Misalignment_NDE,1.0,0.98,0.98989898989899,50
+all,64,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_NDE,0.5,1.0,0.6666666666666666,50
+all,64,leave_one_rotation_out,40Hz,Logistic Regression,Baseline,1.0,0.5,0.6666666666666666,50
+all,64,leave_one_rotation_out,40Hz,Logistic Regression,Bearing,1.0,0.52,0.6842105263157895,50
+all,64,leave_one_rotation_out,40Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,40Hz,Logistic Regression,Misalignment_NDE,0.5050505050505051,1.0,0.6711409395973155,50
+all,64,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+all,64,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_NDE,0.1016949152542373,0.12,0.11009174311926606,50
+all,64,leave_one_rotation_out,pooled,Logistic Regression,Baseline,0.45555555555555555,0.205,0.2827586206896552,200
+all,64,leave_one_rotation_out,pooled,Logistic Regression,Bearing,0.39378238341968913,0.38,0.38676844783715014,200
+all,64,leave_one_rotation_out,pooled,Logistic Regression,Bearing+Unbalance,0.04556962025316456,0.09,0.06050420168067227,200
+all,64,leave_one_rotation_out,pooled,Logistic Regression,Misalignment_NDE,0.7393617021276596,0.695,0.7164948453608248,200
+all,64,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,200
+all,64,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_NDE,0.3271604938271605,0.53,0.40458015267175573,200
+shape,40,stratified_5fold,pooled,Random Forest,Baseline,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Random Forest,Bearing,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Random Forest,Bearing+Unbalance,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Random Forest,Misalignment_NDE,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Random Forest,Unbalance_DE,0.99,0.99,0.99,200
+shape,40,stratified_5fold,pooled,Random Forest,Unbalance_NDE,0.99,0.99,0.99,200
+shape,40,leave_one_rotation_out,10Hz,Random Forest,Baseline,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Random Forest,Misalignment_NDE,0.18382352941176472,1.0,0.3105590062111801,50
+shape,40,leave_one_rotation_out,10Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Random Forest,Baseline,0.7936507936507936,1.0,0.8849557522123894,50
+shape,40,leave_one_rotation_out,20Hz,Random Forest,Bearing,0.5,1.0,0.6666666666666666,50
+shape,40,leave_one_rotation_out,20Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Random Forest,Misalignment_NDE,0.36496350364963503,1.0,0.5347593582887701,50
+shape,40,leave_one_rotation_out,20Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Random Forest,Baseline,0.2808988764044944,1.0,0.43859649122807015,50
+shape,40,leave_one_rotation_out,30Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Random Forest,Misalignment_NDE,1.0,0.62,0.7654320987654321,50
+shape,40,leave_one_rotation_out,30Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Random Forest,Unbalance_NDE,0.7857142857142857,0.22,0.34375,50
+shape,40,leave_one_rotation_out,40Hz,Random Forest,Baseline,0.26666666666666666,0.32,0.2909090909090909,50
+shape,40,leave_one_rotation_out,40Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Random Forest,Misalignment_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,pooled,Random Forest,Baseline,0.3853820598006645,0.58,0.4630738522954092,200
+shape,40,leave_one_rotation_out,pooled,Random Forest,Bearing,0.3937007874015748,0.25,0.3058103975535168,200
+shape,40,leave_one_rotation_out,pooled,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,200
+shape,40,leave_one_rotation_out,pooled,Random Forest,Misalignment_NDE,0.29772727272727273,0.655,0.409375,200
+shape,40,leave_one_rotation_out,pooled,Random Forest,Unbalance_DE,0.0,0.0,0.0,200
+shape,40,leave_one_rotation_out,pooled,Random Forest,Unbalance_NDE,0.2619047619047619,0.055,0.09090909090909091,200
+shape,40,stratified_5fold,pooled,Hist Gradient Boosting,Baseline,1.0,0.995,0.9974937343358395,200
+shape,40,stratified_5fold,pooled,Hist Gradient Boosting,Bearing,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Hist Gradient Boosting,Bearing+Unbalance,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_DE,0.9798994974874372,0.975,0.9774436090225563,200
+shape,40,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_NDE,0.9752475247524752,0.985,0.9800995024875622,200
+shape,40,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Baseline,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Misalignment_NDE,0.2,1.0,0.3333333333333333,50
+shape,40,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,50
+shape,40,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing+Unbalance,0.7027027027027027,0.52,0.5977011494252874,50
+shape,40,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Misalignment_NDE,0.28901734104046245,1.0,0.4484304932735426,50
+shape,40,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Baseline,0.38461538461538464,1.0,0.5555555555555556,50
+shape,40,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,0.34,0.5074626865671642,50
+shape,40,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_NDE,1.0,0.4,0.5714285714285714,50
+shape,40,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Baseline,0.4807692307692308,1.0,0.6493506493506493,50
+shape,40,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Misalignment_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,pooled,Hist Gradient Boosting,Baseline,0.528169014084507,0.75,0.6198347107438017,200
+shape,40,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,200
+shape,40,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.30952380952380953,0.13,0.18309859154929578,200
+shape,40,leave_one_rotation_out,pooled,Hist Gradient Boosting,Misalignment_NDE,0.2237093690248566,0.585,0.3236514522821577,200
+shape,40,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,200
+shape,40,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_NDE,0.3389830508474576,0.1,0.15444015444015444,200
+shape,40,stratified_5fold,pooled,Logistic Regression,Baseline,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Logistic Regression,Bearing,1.0,1.0,1.0,200
+shape,40,stratified_5fold,pooled,Logistic Regression,Bearing+Unbalance,0.9950248756218906,1.0,0.9975062344139651,200
+shape,40,stratified_5fold,pooled,Logistic Regression,Misalignment_NDE,1.0,0.995,0.9974937343358395,200
+shape,40,stratified_5fold,pooled,Logistic Regression,Unbalance_DE,0.9797979797979798,0.97,0.9748743718592965,200
+shape,40,stratified_5fold,pooled,Logistic Regression,Unbalance_NDE,0.9702970297029703,0.98,0.9751243781094527,200
+shape,40,leave_one_rotation_out,10Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+shape,40,leave_one_rotation_out,10Hz,Logistic Regression,Bearing,0.5,1.0,0.6666666666666666,50
+shape,40,leave_one_rotation_out,10Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Logistic Regression,Misalignment_NDE,0.33557046979865773,1.0,0.5025125628140703,50
+shape,40,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+shape,40,leave_one_rotation_out,20Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Logistic Regression,Bearing+Unbalance,0.29239766081871343,1.0,0.45248868778280543,50
+shape,40,leave_one_rotation_out,20Hz,Logistic Regression,Misalignment_NDE,0.3670886075949367,0.58,0.4496124031007752,50
+shape,40,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+shape,40,leave_one_rotation_out,30Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Logistic Regression,Bearing+Unbalance,0.3780487804878049,0.62,0.4696969696969697,50
+shape,40,leave_one_rotation_out,30Hz,Logistic Regression,Misalignment_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_NDE,0.5,1.0,0.6666666666666666,50
+shape,40,leave_one_rotation_out,40Hz,Logistic Regression,Baseline,1.0,0.6,0.75,50
+shape,40,leave_one_rotation_out,40Hz,Logistic Regression,Bearing,0.46153846153846156,0.84,0.5957446808510638,50
+shape,40,leave_one_rotation_out,40Hz,Logistic Regression,Bearing+Unbalance,0.3875968992248062,1.0,0.5586592178770949,50
+shape,40,leave_one_rotation_out,40Hz,Logistic Regression,Misalignment_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+shape,40,leave_one_rotation_out,pooled,Logistic Regression,Baseline,1.0,0.9,0.9473684210526315,200
+shape,40,leave_one_rotation_out,pooled,Logistic Regression,Bearing,0.3552123552123552,0.46,0.4008714596949891,200
+shape,40,leave_one_rotation_out,pooled,Logistic Regression,Bearing+Unbalance,0.34293193717277487,0.655,0.45017182130584193,200
+shape,40,leave_one_rotation_out,pooled,Logistic Regression,Misalignment_NDE,0.34649122807017546,0.395,0.3691588785046729,200
+shape,40,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,200
+shape,40,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_NDE,0.33112582781456956,0.25,0.2849002849002849,200
+reduced32,32,stratified_5fold,pooled,Random Forest,Baseline,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Random Forest,Bearing,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Random Forest,Bearing+Unbalance,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Random Forest,Misalignment_NDE,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Random Forest,Unbalance_DE,0.9949748743718593,0.99,0.9924812030075187,200
+reduced32,32,stratified_5fold,pooled,Random Forest,Unbalance_NDE,0.9900497512437811,0.995,0.9925187032418953,200
+reduced32,32,leave_one_rotation_out,10Hz,Random Forest,Baseline,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,10Hz,Random Forest,Bearing,0.25252525252525254,1.0,0.4032258064516129,50
+reduced32,32,leave_one_rotation_out,10Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,10Hz,Random Forest,Misalignment_NDE,0.8333333333333334,1.0,0.9090909090909091,50
+reduced32,32,leave_one_rotation_out,10Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,10Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Random Forest,Baseline,0.3968253968253968,1.0,0.5681818181818182,50
+reduced32,32,leave_one_rotation_out,20Hz,Random Forest,Bearing,0.4032258064516129,1.0,0.5747126436781609,50
+reduced32,32,leave_one_rotation_out,20Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Random Forest,Baseline,0.31446540880503143,1.0,0.4784688995215311,50
+reduced32,32,leave_one_rotation_out,30Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Random Forest,Unbalance_NDE,1.0,0.82,0.9010989010989011,50
+reduced32,32,leave_one_rotation_out,40Hz,Random Forest,Baseline,0.7804878048780488,0.64,0.7032967032967034,50
+reduced32,32,leave_one_rotation_out,40Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,40Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,40Hz,Random Forest,Misalignment_NDE,0.2183406113537118,1.0,0.35842293906810035,50
+reduced32,32,leave_one_rotation_out,40Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,40Hz,Random Forest,Unbalance_NDE,0.8421052631578947,0.32,0.463768115942029,50
+reduced32,32,leave_one_rotation_out,pooled,Random Forest,Baseline,0.4049079754601227,0.66,0.5019011406844106,200
+reduced32,32,leave_one_rotation_out,pooled,Random Forest,Bearing,0.3105590062111801,0.5,0.3831417624521073,200
+reduced32,32,leave_one_rotation_out,pooled,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,200
+reduced32,32,leave_one_rotation_out,pooled,Random Forest,Misalignment_NDE,0.5141388174807198,1.0,0.6791171477079796,200
+reduced32,32,leave_one_rotation_out,pooled,Random Forest,Unbalance_DE,0.0,0.0,0.0,200
+reduced32,32,leave_one_rotation_out,pooled,Random Forest,Unbalance_NDE,0.57,0.285,0.38,200
+reduced32,32,stratified_5fold,pooled,Hist Gradient Boosting,Baseline,0.995,0.995,0.995,200
+reduced32,32,stratified_5fold,pooled,Hist Gradient Boosting,Bearing,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.9950248756218906,1.0,0.9975062344139651,200
+reduced32,32,stratified_5fold,pooled,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_DE,0.9849246231155779,0.98,0.9824561403508771,200
+reduced32,32,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_NDE,0.985,0.985,0.985,200
+reduced32,32,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Baseline,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing,0.3546099290780142,1.0,0.5235602094240838,50
+reduced32,32,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Misalignment_NDE,0.411214953271028,0.88,0.5605095541401274,50
+reduced32,32,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Baseline,0.4716981132075472,1.0,0.6410256410256411,50
+reduced32,32,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing+Unbalance,0.3472222222222222,1.0,0.5154639175257731,50
+reduced32,32,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Baseline,0.24271844660194175,1.0,0.390625,50
+reduced32,32,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,0.46,0.6301369863013698,50
+reduced32,32,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_NDE,1.0,0.88,0.9361702127659575,50
+reduced32,32,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Baseline,1.0,0.3,0.46153846153846156,50
+reduced32,32,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing,0.2631578947368421,1.0,0.4166666666666667,50
+reduced32,32,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Misalignment_NDE,0.12345679012345678,0.2,0.15267175572519084,50
+reduced32,32,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,pooled,Hist Gradient Boosting,Baseline,0.3516819571865443,0.575,0.4364326375711575,200
+reduced32,32,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing,0.2840909090909091,0.5,0.36231884057971014,200
+reduced32,32,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.2564102564102564,0.25,0.25316455696202533,200
+reduced32,32,leave_one_rotation_out,pooled,Hist Gradient Boosting,Misalignment_NDE,0.48659003831417624,0.635,0.5509761388286334,200
+reduced32,32,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,200
+reduced32,32,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_NDE,0.8627450980392157,0.22,0.350597609561753,200
+reduced32,32,stratified_5fold,pooled,Logistic Regression,Baseline,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Logistic Regression,Bearing,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Logistic Regression,Bearing+Unbalance,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,200
+reduced32,32,stratified_5fold,pooled,Logistic Regression,Unbalance_DE,0.9641025641025641,0.94,0.9518987341772152,200
+reduced32,32,stratified_5fold,pooled,Logistic Regression,Unbalance_NDE,0.9414634146341463,0.965,0.9530864197530864,200
+reduced32,32,leave_one_rotation_out,10Hz,Logistic Regression,Baseline,1.0,0.1,0.18181818181818182,50
+reduced32,32,leave_one_rotation_out,10Hz,Logistic Regression,Bearing,0.5,1.0,0.6666666666666666,50
+reduced32,32,leave_one_rotation_out,10Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,10Hz,Logistic Regression,Misalignment_NDE,1.0,0.5,0.6666666666666666,50
+reduced32,32,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_NDE,0.29411764705882354,1.0,0.45454545454545453,50
+reduced32,32,leave_one_rotation_out,20Hz,Logistic Regression,Baseline,0.45871559633027525,1.0,0.6289308176100629,50
+reduced32,32,leave_one_rotation_out,20Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Logistic Regression,Bearing+Unbalance,0.20491803278688525,0.5,0.29069767441860467,50
+reduced32,32,leave_one_rotation_out,20Hz,Logistic Regression,Misalignment_NDE,1.0,0.66,0.7951807228915663,50
+reduced32,32,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Logistic Regression,Baseline,0.819672131147541,1.0,0.9009009009009009,50
+reduced32,32,leave_one_rotation_out,30Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Logistic Regression,Bearing+Unbalance,0.43820224719101125,0.78,0.5611510791366906,50
+reduced32,32,leave_one_rotation_out,30Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_NDE,0.5,1.0,0.6666666666666666,50
+reduced32,32,leave_one_rotation_out,40Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+reduced32,32,leave_one_rotation_out,40Hz,Logistic Regression,Bearing,1.0,0.8,0.8888888888888888,50
+reduced32,32,leave_one_rotation_out,40Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,40Hz,Logistic Regression,Misalignment_NDE,0.5833333333333334,0.28,0.3783783783783784,50
+reduced32,32,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+reduced32,32,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_NDE,0.03636363636363636,0.08,0.05,50
+reduced32,32,leave_one_rotation_out,pooled,Logistic Regression,Baseline,0.6888888888888889,0.775,0.7294117647058823,200
+reduced32,32,leave_one_rotation_out,pooled,Logistic Regression,Bearing,0.5487804878048781,0.45,0.4945054945054945,200
+reduced32,32,leave_one_rotation_out,pooled,Logistic Regression,Bearing+Unbalance,0.2229965156794425,0.32,0.26283367556468173,200
+reduced32,32,leave_one_rotation_out,pooled,Logistic Regression,Misalignment_NDE,0.9242424242424242,0.61,0.7349397590361446,200
+reduced32,32,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,200
+reduced32,32,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_NDE,0.2736842105263158,0.52,0.3586206896551724,200
+spectral_acc16,16,stratified_5fold,pooled,Random Forest,Baseline,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Random Forest,Bearing,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Random Forest,Bearing+Unbalance,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Random Forest,Misalignment_NDE,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Random Forest,Unbalance_DE,0.9704433497536946,0.985,0.9776674937965261,200
+spectral_acc16,16,stratified_5fold,pooled,Random Forest,Unbalance_NDE,0.9847715736040609,0.97,0.9773299748110831,200
+spectral_acc16,16,leave_one_rotation_out,10Hz,Random Forest,Baseline,0.3333333333333333,1.0,0.5,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Random Forest,Bearing,0.5,1.0,0.6666666666666666,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Random Forest,Misalignment_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Random Forest,Baseline,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Random Forest,Bearing,0.5,1.0,0.6666666666666666,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Random Forest,Unbalance_DE,0.494949494949495,0.98,0.6577181208053692,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Random Forest,Baseline,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Random Forest,Bearing,0.5,1.0,0.6666666666666666,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Random Forest,Unbalance_DE,0.2537313432835821,0.68,0.3695652173913043,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Random Forest,Baseline,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Random Forest,Misalignment_NDE,0.2127659574468085,1.0,0.3508771929824561,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Random Forest,Unbalance_NDE,0.18461538461538463,0.24,0.20869565217391303,50
+spectral_acc16,16,leave_one_rotation_out,pooled,Random Forest,Baseline,0.24875621890547264,0.25,0.24937655860349128,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Random Forest,Bearing,0.5,0.75,0.6,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Random Forest,Misalignment_NDE,0.44776119402985076,0.75,0.5607476635514018,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Random Forest,Unbalance_DE,0.29328621908127206,0.415,0.34368530020703936,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Random Forest,Unbalance_NDE,0.14814814814814814,0.06,0.08540925266903915,200
+spectral_acc16,16,stratified_5fold,pooled,Hist Gradient Boosting,Baseline,1.0,0.995,0.9974937343358395,200
+spectral_acc16,16,stratified_5fold,pooled,Hist Gradient Boosting,Bearing,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Hist Gradient Boosting,Bearing+Unbalance,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_DE,0.98,0.98,0.98,200
+spectral_acc16,16,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_NDE,0.9751243781094527,0.98,0.9775561097256857,200
+spectral_acc16,16,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Baseline,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing,0.16666666666666666,1.0,0.2857142857142857,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Misalignment_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Baseline,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing,0.49504950495049505,1.0,0.6622516556291391,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,0.98,0.98989898989899,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_DE,0.3333333333333333,1.0,0.5,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Baseline,1.0,0.98,0.98989898989899,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing,0.5,1.0,0.6666666666666666,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Misalignment_NDE,0.49504950495049505,1.0,0.6622516556291391,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_DE,1.0,0.04,0.07692307692307693,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Baseline,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Misalignment_NDE,0.2032520325203252,1.0,0.33783783783783783,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_NDE,0.14583333333333334,0.14,0.14285714285714285,50
+spectral_acc16,16,leave_one_rotation_out,pooled,Hist Gradient Boosting,Baseline,0.8909090909090909,0.245,0.3843137254901961,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing,0.2994011976047904,0.75,0.42796005706134094,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Hist Gradient Boosting,Misalignment_NDE,0.37626262626262624,0.745,0.5,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_DE,0.34210526315789475,0.26,0.29545454545454547,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_NDE,0.07291666666666667,0.035,0.0472972972972973,200
+spectral_acc16,16,stratified_5fold,pooled,Logistic Regression,Baseline,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Logistic Regression,Bearing,0.9521531100478469,0.995,0.9731051344743277,200
+spectral_acc16,16,stratified_5fold,pooled,Logistic Regression,Bearing+Unbalance,0.9947643979057592,0.95,0.9718670076726342,200
+spectral_acc16,16,stratified_5fold,pooled,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,200
+spectral_acc16,16,stratified_5fold,pooled,Logistic Regression,Unbalance_DE,0.7966101694915254,0.94,0.8623853211009175,200
+spectral_acc16,16,stratified_5fold,pooled,Logistic Regression,Unbalance_NDE,0.926829268292683,0.76,0.8351648351648352,200
+spectral_acc16,16,leave_one_rotation_out,10Hz,Logistic Regression,Baseline,0.5376344086021505,1.0,0.6993006993006993,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Logistic Regression,Bearing,0.5050505050505051,1.0,0.6711409395973155,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Logistic Regression,Misalignment_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_DE,0.5,1.0,0.6666666666666666,50
+spectral_acc16,16,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Logistic Regression,Bearing+Unbalance,0.5,1.0,0.6666666666666666,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_DE,0.5555555555555556,1.0,0.7142857142857143,50
+spectral_acc16,16,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_NDE,1.0,0.2,0.3333333333333333,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Logistic Regression,Baseline,1.0,0.98,0.98989898989899,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Logistic Regression,Bearing,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Logistic Regression,Bearing+Unbalance,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_DE,0.5154639175257731,1.0,0.6802721088435374,50
+spectral_acc16,16,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_NDE,0.75,0.06,0.1111111111111111,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Logistic Regression,Bearing,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+spectral_acc16,16,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_NDE,0.46808510638297873,0.88,0.6111111111111112,50
+spectral_acc16,16,leave_one_rotation_out,pooled,Logistic Regression,Baseline,0.8223140495867769,0.995,0.9004524886877828,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Logistic Regression,Bearing,0.7537688442211056,0.75,0.7518796992481203,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Logistic Regression,Bearing+Unbalance,0.6410256410256411,0.5,0.5617977528089888,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Logistic Regression,Misalignment_NDE,1.0,0.75,0.8571428571428571,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_DE,0.44510385756676557,0.75,0.5586592178770949,200
+spectral_acc16,16,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_NDE,0.49137931034482757,0.285,0.36075949367088606,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Random Forest,Baseline,1.0,1.0,1.0,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Random Forest,Bearing,1.0,1.0,1.0,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Random Forest,Bearing+Unbalance,1.0,1.0,1.0,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Random Forest,Misalignment_NDE,1.0,1.0,1.0,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Random Forest,Unbalance_DE,0.9751243781094527,0.98,0.9775561097256857,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Random Forest,Unbalance_NDE,0.9798994974874372,0.975,0.9774436090225563,200
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Random Forest,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Random Forest,Bearing,0.5,1.0,0.6666666666666666,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Random Forest,Unbalance_DE,0.5,1.0,0.6666666666666666,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Random Forest,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Random Forest,Bearing,0.5050505050505051,1.0,0.6711409395973155,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Random Forest,Bearing+Unbalance,1.0,0.02,0.0392156862745098,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Random Forest,Unbalance_DE,0.5050505050505051,1.0,0.6711409395973155,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Random Forest,Unbalance_NDE,1.0,0.02,0.0392156862745098,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Random Forest,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Random Forest,Bearing,0.5,1.0,0.6666666666666666,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Random Forest,Unbalance_DE,0.84,0.42,0.56,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Random Forest,Unbalance_NDE,0.6133333333333333,0.92,0.736,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Random Forest,Baseline,0.5,1.0,0.6666666666666666,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Random Forest,Bearing,1.0,0.98,0.98989898989899,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Random Forest,Misalignment_NDE,0.9803921568627451,1.0,0.9900990099009901,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Random Forest,Unbalance_DE,0.25,0.14,0.1794871794871795,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Random Forest,Unbalance_NDE,0.4027777777777778,0.58,0.47540983606557374,50
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Random Forest,Baseline,0.8,1.0,0.8888888888888888,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Random Forest,Bearing,0.5718390804597702,0.995,0.7262773722627737,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Random Forest,Bearing+Unbalance,1.0,0.005,0.009950248756218905,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Random Forest,Misalignment_NDE,0.9950248756218906,1.0,0.9975062344139651,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Random Forest,Unbalance_DE,0.5079365079365079,0.64,0.5663716814159292,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Random Forest,Unbalance_NDE,0.5135135135135135,0.38,0.4367816091954023,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Hist Gradient Boosting,Bearing,0.99,0.99,0.99,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.9949494949494949,0.985,0.9899497487437185,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Hist Gradient Boosting,Misalignment_NDE,0.9950248756218906,1.0,0.9975062344139651,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_DE,0.9653465346534653,0.975,0.9701492537313433,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_NDE,0.9748743718592965,0.97,0.9724310776942355,200
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Baseline,0.35294117647058826,0.36,0.3564356435643564,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing+Unbalance,0.2361111111111111,0.34,0.2786885245901639,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Misalignment_NDE,0.6666666666666666,1.0,0.8,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_DE,0.29411764705882354,0.6,0.39473684210526316,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing,1.0,0.84,0.9130434782608695,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing+Unbalance,0.8620689655172413,1.0,0.9259259259259259,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_DE,0.4791666666666667,0.92,0.6301369863013698,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing,0.5,1.0,0.6666666666666666,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,0.82,0.9010989010989011,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_DE,0.6493506493506493,1.0,0.7874015748031497,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_NDE,1.0,0.64,0.7804878048780488,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing+Unbalance,1.0,0.1,0.18181818181818182,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Misalignment_NDE,0.5,1.0,0.6666666666666666,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_DE,0.2972972972972973,0.22,0.25287356321839083,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_NDE,0.3333333333333333,0.72,0.45569620253164556,50
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Hist Gradient Boosting,Baseline,0.835820895522388,0.84,0.8379052369077307,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing,0.647887323943662,0.46,0.5380116959064327,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.5333333333333333,0.36,0.4298507462686567,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Hist Gradient Boosting,Misalignment_NDE,0.7180451127819549,0.955,0.8197424892703863,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_DE,0.4391025641025641,0.685,0.53515625,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_NDE,0.4722222222222222,0.34,0.3953488372093023,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Logistic Regression,Baseline,1.0,1.0,1.0,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Logistic Regression,Bearing,0.9950248756218906,1.0,0.9975062344139651,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Logistic Regression,Bearing+Unbalance,1.0,0.995,0.9974937343358395,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Logistic Regression,Unbalance_DE,0.8829268292682927,0.905,0.8938271604938272,200
+spectral_ilr_acc12,12,stratified_5fold,pooled,Logistic Regression,Unbalance_NDE,0.9025641025641026,0.88,0.8911392405063291,200
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Logistic Regression,Bearing,0.8928571428571429,0.5,0.6410256410256411,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_DE,0.4845360824742268,0.94,0.6394557823129252,50
+spectral_ilr_acc12,12,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Logistic Regression,Bearing+Unbalance,0.5,1.0,0.6666666666666666,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_DE,0.494949494949495,0.98,0.6577181208053692,50
+spectral_ilr_acc12,12,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Logistic Regression,Bearing,0.5,1.0,0.6666666666666666,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_DE,0.6410256410256411,1.0,0.78125,50
+spectral_ilr_acc12,12,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_NDE,1.0,0.44,0.6111111111111112,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Logistic Regression,Bearing,1.0,0.96,0.9795918367346939,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Logistic Regression,Misalignment_NDE,0.9615384615384616,1.0,0.9803921568627451,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_DE,0.18032786885245902,0.22,0.1981981981981982,50
+spectral_ilr_acc12,12,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_NDE,0.4657534246575342,0.68,0.5528455284552846,50
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Logistic Regression,Baseline,1.0,1.0,1.0,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Logistic Regression,Bearing,0.6988636363636364,0.615,0.6542553191489362,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Logistic Regression,Bearing+Unbalance,0.43103448275862066,0.25,0.31645569620253167,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Logistic Regression,Misalignment_NDE,0.9900990099009901,1.0,0.9950248756218906,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_DE,0.46865671641791046,0.785,0.5869158878504673,200
+spectral_ilr_acc12,12,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_NDE,0.32748538011695905,0.28,0.3018867924528302,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Random Forest,Baseline,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Random Forest,Bearing,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Random Forest,Bearing+Unbalance,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Random Forest,Misalignment_NDE,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Random Forest,Unbalance_DE,0.9949748743718593,0.99,0.9924812030075187,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Random Forest,Unbalance_NDE,0.9900497512437811,0.995,0.9925187032418953,200
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Random Forest,Baseline,1.0,0.04,0.07692307692307693,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Random Forest,Bearing,0.9245283018867925,0.98,0.9514563106796117,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Random Forest,Misalignment_NDE,0.25380710659898476,1.0,0.4048582995951417,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Random Forest,Baseline,0.4,1.0,0.5714285714285714,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Random Forest,Bearing,0.45454545454545453,1.0,0.625,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Random Forest,Misalignment_NDE,0.7692307692307693,1.0,0.8695652173913043,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Random Forest,Baseline,0.3333333333333333,1.0,0.5,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Random Forest,Bearing,0.4,0.44,0.41904761904761906,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Random Forest,Baseline,1.0,0.26,0.4126984126984127,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Random Forest,Bearing,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Random Forest,Bearing+Unbalance,0.3816793893129771,1.0,0.5524861878453039,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Random Forest,Misalignment_NDE,0.9615384615384616,1.0,0.9803921568627451,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Random Forest,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Random Forest,Unbalance_NDE,0.4,0.8,0.5333333333333333,50
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Random Forest,Baseline,0.39655172413793105,0.575,0.46938775510204084,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Random Forest,Bearing,0.555045871559633,0.605,0.5789473684210527,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Random Forest,Bearing+Unbalance,0.3105590062111801,0.25,0.2770083102493075,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Random Forest,Misalignment_NDE,0.5494505494505495,1.0,0.7092198581560284,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Random Forest,Unbalance_DE,0.0,0.0,0.0,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Random Forest,Unbalance_NDE,0.273972602739726,0.2,0.23121387283236994,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Hist Gradient Boosting,Baseline,1.0,0.995,0.9974937343358395,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Hist Gradient Boosting,Bearing,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.9950248756218906,1.0,0.9975062344139651,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Hist Gradient Boosting,Misalignment_NDE,1.0,0.995,0.9974937343358395,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_DE,0.985,0.985,0.985,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Hist Gradient Boosting,Unbalance_NDE,0.9850746268656716,0.99,0.9875311720698254,200
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Baseline,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Misalignment_NDE,0.2,1.0,0.3333333333333333,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Bearing+Unbalance,0.25,1.0,0.4,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Baseline,0.38461538461538464,1.0,0.5555555555555556,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Hist Gradient Boosting,Unbalance_NDE,0.2857142857142857,0.4,0.3333333333333333,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Baseline,0.4807692307692308,1.0,0.6493506493506493,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Misalignment_NDE,0.5454545454545454,0.6,0.5714285714285714,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_DE,0.4838709677419355,0.3,0.37037037037037035,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Hist Gradient Boosting,Unbalance_NDE,0.45454545454545453,1.0,0.625,50
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Hist Gradient Boosting,Baseline,0.528169014084507,0.75,0.6198347107438017,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.25,0.25,0.25,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Hist Gradient Boosting,Misalignment_NDE,0.4444444444444444,0.9,0.5950413223140496,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_DE,0.4838709677419355,0.075,0.12987012987012986,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Hist Gradient Boosting,Unbalance_NDE,0.31390134529147984,0.35,0.3309692671394799,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Logistic Regression,Baseline,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Logistic Regression,Bearing,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Logistic Regression,Bearing+Unbalance,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Logistic Regression,Unbalance_DE,0.9898477157360406,0.975,0.982367758186398,200
+shape_plus_spectral56,56,stratified_5fold,pooled,Logistic Regression,Unbalance_NDE,0.9753694581280788,0.99,0.9826302729528535,200
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Logistic Regression,Baseline,1.0,0.06,0.11320754716981132,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Logistic Regression,Bearing,0.5,1.0,0.6666666666666666,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Logistic Regression,Misalignment_NDE,0.8620689655172413,1.0,0.9259259259259259,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,10Hz,Logistic Regression,Unbalance_NDE,0.3381294964028777,0.94,0.4973544973544973,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Logistic Regression,Baseline,0.35714285714285715,1.0,0.5263157894736842,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Logistic Regression,Bearing+Unbalance,0.45871559633027525,1.0,0.6289308176100629,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Logistic Regression,Misalignment_NDE,1.0,0.86,0.9247311827956989,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_DE,1.0,0.16,0.27586206896551724,50
+shape_plus_spectral56,56,leave_one_rotation_out,20Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Logistic Regression,Bearing+Unbalance,0.5,1.0,0.6666666666666666,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,30Hz,Logistic Regression,Unbalance_NDE,0.5,1.0,0.6666666666666666,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Logistic Regression,Bearing,1.0,1.0,1.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Logistic Regression,Misalignment_NDE,1.0,0.82,0.9010989010989011,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_DE,0.0,0.0,0.0,50
+shape_plus_spectral56,56,leave_one_rotation_out,40Hz,Logistic Regression,Unbalance_NDE,0.31446540880503143,1.0,0.4784688995215311,50
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Logistic Regression,Baseline,0.6296296296296297,0.765,0.690744920993228,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Logistic Regression,Bearing,0.6666666666666666,0.5,0.5714285714285714,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Logistic Regression,Bearing+Unbalance,0.4784688995215311,0.5,0.4889975550122249,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Logistic Regression,Misalignment_NDE,0.9583333333333334,0.92,0.9387755102040817,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_DE,1.0,0.04,0.07692307692307693,200
+shape_plus_spectral56,56,leave_one_rotation_out,pooled,Logistic Regression,Unbalance_NDE,0.3693467336683417,0.735,0.4916387959866221,200
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Random Forest,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Random Forest,Bearing,0.5,1.0,0.6666666666666666,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Random Forest,Unbalance_DE,0.5,1.0,0.6666666666666666,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Random Forest,Unbalance_NDE,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Random Forest,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Random Forest,Bearing,0.5050505050505051,1.0,0.6711409395973155,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Random Forest,Bearing+Unbalance,1.0,0.02,0.0392156862745098,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Random Forest,Unbalance_DE,0.5050505050505051,1.0,0.6711409395973155,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Random Forest,Unbalance_NDE,1.0,0.02,0.0392156862745098,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Random Forest,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Random Forest,Bearing,0.5,1.0,0.6666666666666666,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Random Forest,Misalignment_NDE,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Random Forest,Unbalance_DE,0.84,0.42,0.56,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Random Forest,Unbalance_NDE,0.6133333333333333,0.92,0.736,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Random Forest,Baseline,0.5,1.0,0.6666666666666666,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Random Forest,Bearing,1.0,0.98,0.98989898989899,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Random Forest,Bearing+Unbalance,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Random Forest,Misalignment_NDE,0.9803921568627451,1.0,0.9900990099009901,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Random Forest,Unbalance_DE,0.25,0.14,0.1794871794871795,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Random Forest,Unbalance_NDE,0.4027777777777778,0.58,0.47540983606557374,50
+nested_selector,12,leave_one_rotation_out_nested,pooled,Random Forest,Baseline,0.8,1.0,0.8888888888888888,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Random Forest,Bearing,0.5718390804597702,0.995,0.7262773722627737,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Random Forest,Bearing+Unbalance,1.0,0.005,0.009950248756218905,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Random Forest,Misalignment_NDE,0.9950248756218906,1.0,0.9975062344139651,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Random Forest,Unbalance_DE,0.5079365079365079,0.64,0.5663716814159292,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Random Forest,Unbalance_NDE,0.5135135135135135,0.38,0.4367816091954023,200
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Hist Gradient Boosting,Baseline,0.35294117647058826,0.36,0.3564356435643564,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Hist Gradient Boosting,Bearing+Unbalance,0.2361111111111111,0.34,0.2786885245901639,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Hist Gradient Boosting,Misalignment_NDE,0.6666666666666666,1.0,0.8,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Hist Gradient Boosting,Unbalance_DE,0.29411764705882354,0.6,0.39473684210526316,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Hist Gradient Boosting,Bearing,1.0,0.84,0.9130434782608695,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Hist Gradient Boosting,Bearing+Unbalance,0.8620689655172413,1.0,0.9259259259259259,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Hist Gradient Boosting,Unbalance_DE,0.4791666666666667,0.92,0.6301369863013698,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Hist Gradient Boosting,Unbalance_NDE,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Hist Gradient Boosting,Bearing,0.5,1.0,0.6666666666666666,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Hist Gradient Boosting,Bearing+Unbalance,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Hist Gradient Boosting,Misalignment_NDE,1.0,0.82,0.9010989010989011,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Hist Gradient Boosting,Unbalance_DE,0.6493506493506493,1.0,0.7874015748031497,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Hist Gradient Boosting,Unbalance_NDE,1.0,0.64,0.7804878048780488,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Hist Gradient Boosting,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Hist Gradient Boosting,Bearing,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Hist Gradient Boosting,Bearing+Unbalance,1.0,0.1,0.18181818181818182,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Hist Gradient Boosting,Misalignment_NDE,0.5,1.0,0.6666666666666666,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Hist Gradient Boosting,Unbalance_DE,0.2972972972972973,0.22,0.25287356321839083,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Hist Gradient Boosting,Unbalance_NDE,0.3333333333333333,0.72,0.45569620253164556,50
+nested_selector,12,leave_one_rotation_out_nested,pooled,Hist Gradient Boosting,Baseline,0.835820895522388,0.84,0.8379052369077307,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Hist Gradient Boosting,Bearing,0.647887323943662,0.46,0.5380116959064327,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Hist Gradient Boosting,Bearing+Unbalance,0.5333333333333333,0.36,0.4298507462686567,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Hist Gradient Boosting,Misalignment_NDE,0.7180451127819549,0.955,0.8197424892703863,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Hist Gradient Boosting,Unbalance_DE,0.4391025641025641,0.685,0.53515625,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Hist Gradient Boosting,Unbalance_NDE,0.4722222222222222,0.34,0.3953488372093023,200
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Logistic Regression,Bearing,0.8928571428571429,0.5,0.6410256410256411,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Logistic Regression,Unbalance_DE,0.4845360824742268,0.94,0.6394557823129252,50
+nested_selector,12,leave_one_rotation_out_nested,10Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Logistic Regression,Bearing,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Logistic Regression,Bearing+Unbalance,0.5,1.0,0.6666666666666666,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Logistic Regression,Unbalance_DE,0.494949494949495,0.98,0.6577181208053692,50
+nested_selector,12,leave_one_rotation_out_nested,20Hz,Logistic Regression,Unbalance_NDE,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Logistic Regression,Bearing,0.5,1.0,0.6666666666666666,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Logistic Regression,Misalignment_NDE,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Logistic Regression,Unbalance_DE,0.6410256410256411,1.0,0.78125,50
+nested_selector,12,leave_one_rotation_out_nested,30Hz,Logistic Regression,Unbalance_NDE,1.0,0.44,0.6111111111111112,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Logistic Regression,Baseline,1.0,1.0,1.0,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Logistic Regression,Bearing,1.0,0.96,0.9795918367346939,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Logistic Regression,Bearing+Unbalance,0.0,0.0,0.0,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Logistic Regression,Misalignment_NDE,0.9615384615384616,1.0,0.9803921568627451,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Logistic Regression,Unbalance_DE,0.18032786885245902,0.22,0.1981981981981982,50
+nested_selector,12,leave_one_rotation_out_nested,40Hz,Logistic Regression,Unbalance_NDE,0.4657534246575342,0.68,0.5528455284552846,50
+nested_selector,12,leave_one_rotation_out_nested,pooled,Logistic Regression,Baseline,1.0,1.0,1.0,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Logistic Regression,Bearing,0.6988636363636364,0.615,0.6542553191489362,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Logistic Regression,Bearing+Unbalance,0.43103448275862066,0.25,0.31645569620253167,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Logistic Regression,Misalignment_NDE,0.9900990099009901,1.0,0.9950248756218906,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Logistic Regression,Unbalance_DE,0.46865671641791046,0.785,0.5869158878504673,200
+nested_selector,12,leave_one_rotation_out_nested,pooled,Logistic Regression,Unbalance_NDE,0.32748538011695905,0.28,0.3018867924528302,200

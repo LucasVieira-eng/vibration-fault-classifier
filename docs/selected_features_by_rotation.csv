@@ -1,0 +1,13 @@
+model,held_out_rotation,selected_feature_set,n_features,inner_mean_f1_macro
+Random Forest,10Hz,spectral_ilr_acc12,12,0.5076661732847958
+Random Forest,20Hz,spectral_ilr_acc12,12,0.369740949096818
+Random Forest,30Hz,spectral_ilr_acc12,12,0.5162587126317263
+Random Forest,40Hz,spectral_ilr_acc12,12,0.5537913615170688
+Hist Gradient Boosting,10Hz,spectral_ilr_acc12,12,0.52511360370148
+Hist Gradient Boosting,20Hz,spectral_ilr_acc12,12,0.34816653333648034
+Hist Gradient Boosting,30Hz,spectral_ilr_acc12,12,0.3776650417902354
+Hist Gradient Boosting,40Hz,spectral_ilr_acc12,12,0.37921051994340704
+Logistic Regression,10Hz,spectral_ilr_acc12,12,0.6237880848908394
+Logistic Regression,20Hz,spectral_ilr_acc12,12,0.5481155667306506
+Logistic Regression,30Hz,spectral_ilr_acc12,12,0.517935378968426
+Logistic Regression,40Hz,spectral_ilr_acc12,12,0.4604542379424484

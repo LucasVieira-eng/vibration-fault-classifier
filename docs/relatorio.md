@@ -97,13 +97,13 @@ A hipótese inicial era que a queda se devesse à amplitude, que cresce com a ro
 - **Possível proximidade entre arquivos de treino e teste na validação cruzada.** Os arquivos de uma mesma condição e rotação provavelmente foram gravados em sequência; não há informação no dataset para verificar isso. Se for o caso, os ~99% estão superestimados.
 - **Uma única execução, com uma única semente (`random_state=42`).** Não há intervalos de confiança. Diferenças de poucos pontos entre modelos devem ser lidas como empate, principalmente na rotação deixada de fora, onde um mesmo modelo oscila 20 a 30 pontos entre rotações.
 - **Hiperparâmetros padrão, sem ajuste**, por decisão do escopo: o objetivo era comparar famílias de modelos em igualdade de condições. Os resultados podem mudar com ajuste.
-- **Só features no domínio do tempo.** Não foram usadas bandas de frequência, apesar de a EDA indicar que elas separam bem algumas classes.
+- **Só features no domínio do tempo no experimento inicial.** A comparação espectral adicional está documentada abaixo; ainda não foram testadas features de ordem sincronizadas pela rotação.
 - **Linhas com valores ausentes são descartadas** (cerca de 0,3% das linhas), então as features de cada arquivo são calculadas sobre um pouco menos que os 36.000 pontos.
 - **Licença do dataset não verificada.**
 
 ## Próximos passos
 
-- **Features no domínio da frequência normalizadas pela rotação:** energia em 1x, 2x e 3x a frequência de rotação e RMS espectral por bandas, divididos pelo RMS total. É o teste direto da hipótese acima e o experimento com maior chance de melhorar a generalização entre rotações.
+- **Features de ordem sincronizadas pela rotação:** analisar 1x, 2x, 3x e ordens superiores usando a referência angular do trigger. O experimento espectral atual usa bandas fixas em Hz e contrastes entre elas; ainda não alinha os espectros pelo giro do eixo.
 - **Separar `Unbalance_DE` de `Unbalance_NDE`** com features calculadas por lado do eixo (por exemplo, razões entre os canais `de` e `nde`).
 - **Cortar cada arquivo em janelas** (por exemplo, de 1 s), com agrupamento por arquivo na validação, para ter mais exemplos e medir a variação dentro de cada arquivo.
 - **Repetir as avaliações com várias sementes** e relatar média e desvio, para saber quais diferenças entre modelos são reais.
@@ -120,3 +120,113 @@ python -m src.compare_models --features shape
 ```
 
 O experimento com `rotation_hz` foi obtido chamando `load_xy` com `drop_columns=()`.
+
+
+## Experimento adicional: generalização com features espectrais
+
+Este experimento complementa e preserva os resultados anteriores. Os CSVs históricos `comparison_all.csv`, `comparison_shape.csv` e `confusion_matrices.csv` não foram substituídos. Os resultados abaixo são escritos em arquivos separados pelo novo comando `python -m src.compare_generalization`.
+
+**Nota de reprodução:** `data/processed/features.csv` não é versionado e não estava presente antes desta execução. Ao reconstruir as features temporais, o resultado `shape` coincidiu com o CSV histórico; no conjunto `all`, o Hist Gradient Boosting mudou de 36,50% para 36,17% e a Regressão Logística de 32,17% para 31,67% no protocolo B, enquanto o Random Forest permaneceu em 33,75%. A causa exata não pode ser estabelecida sem a tabela derivada usada na execução antiga. Os CSVs históricos foram mantidos; as comparações deste experimento novo usam uma única tabela gerada na mesma execução.
+
+### Método
+
+- O conjunto de features foi reconstruído a partir dos mesmos 1.200 arquivos e do mesmo leitor usado pelo modelo temporal. Assim, as features temporais e espectrais de cada linha usam exatamente os mesmos pontos finitos, permitindo uma comparação controlada.
+- As features espectrais são RMS de energia em quatro bandas já exploradas na EDA: 0–100, 100–500, 500–1.500 e 1.500–3.000 Hz, calculadas com periodograma Hann a 6 kHz. Foram usadas apenas as quatro acelerações: o registro do dataset informa que os canais de velocidade são integrados a partir da aceleração ([Zenodo](https://zenodo.org/records/14388093)).
+- O conjunto reduzido de 32 features mantém RMS, pico a pico, assimetria e curtose nos oito canais. Remove média, desvio padrão, média absoluta e pico, que são redundantes ou muito próximos de outras medidas neste sinal.
+- O conjunto espectral ILR tem 12 features: três contrastes logarítmicos independentes entre as quatro bandas em cada acelerômetro. Isso evita usar quatro proporções que somam 1 e, portanto, têm uma dependência matemática.
+- Não foi feita busca de hiperparâmetros. Os seis conjuntos fixos são comparados sem ajuste; além disso, um seletor aninhado compara os conjuntos por GroupKFold somente nas rotações de treino, escolhe pela F1 macro interna e avalia depois na rotação externa. A rotação não entra como preditora: serve para separar os grupos. A padronização da Regressão Logística permanece dentro do pipeline de cada fold.
+
+O seletor aninhado escolheu o conjunto espectral ILR de 12 features para os três modelos em todas as quatro rotações externas. As métricas resultantes coincidem com a linha ILR da tabela. As escolhas por divisão estão em `docs/selected_features_by_rotation.csv`.
+
+| Modelo | Features escolhidas nas quatro divisões | Acurácia externa média | F1 macro médio por rotação |
+|---|---|---:|---:|
+| Random Forest | ILR espectral (12) | 67,00% | 0,584 |
+| Hist Gradient Boosting | ILR espectral (12) | 60,67% | 0,541 |
+| Regressão Logística | ILR espectral (12) | 65,50% | 0,599 |
+
+### Resultados do protocolo B — rotação deixada de fora
+
+Cada célula mostra acurácia / F1 macro médio entre as quatro rotações deixadas de fora. O F1 dessa tabela é a média dos quatro resultados por rotação; ele pode diferir do F1 calculado uma única vez sobre as previsões agregadas.
+
+| Features | Random Forest | Hist Gradient Boosting | Regressão Logística |
+|---|---:|---:|---:|
+| 64 temporais | 33,75% / 0,245 | 36,17% / 0,255 | 31,67% / 0,265 |
+| 40 de formato | 25,67% / 0,177 | 26,08% / 0,194 | 44,33% / 0,338 |
+| 32 temporais reduzidas | 40,75% / 0,307 | 36,33% / 0,260 | 44,58% / 0,380 |
+| 16 espectrais absolutas | 37,08% / 0,254 | 33,92% / 0,221 | **67,17% / 0,589** |
+| 12 espectrais ILR | **67,00% / 0,584** | **60,67% / 0,541** | 65,50% / **0,599** |
+| Formato + espectro (56) | 43,83% / 0,329 | 38,75% / 0,285 | 57,67% / 0,470 |
+
+A melhor representação muda conforme o algoritmo. O conjunto ILR de 12 features melhora os três modelos em acurácia média comparado ao melhor resultado antigo de cada família. Com as 16 bandas absolutas, a Regressão Logística tem a maior acurácia e F1 médio observados. Isso é evidência promissora, mas não prova que esse conjunto será o melhor em novas máquinas ou em velocidades fora desta base.
+
+### Resultados do protocolo A — 5-fold
+
+A acurácia média continuou alta para a maioria das combinações, porque as quatro velocidades aparecem no treino e no teste. Para as 16 features espectrais absolutas, a Regressão Logística ficou em 94,08%; para as 12 ILR, os três modelos ficaram entre 96,33% e 99,25%. Esses números continuam respondendo à avaliação em velocidades já representadas no treino.
+
+| Features | Random Forest | Hist Gradient Boosting | Regressão Logística |
+|---|---:|---:|---:|
+| 64 temporais | 99,83% | 99,33% | 99,17% |
+| 40 de formato | 99,67% | 99,25% | 99,08% |
+| 32 temporais reduzidas | 99,75% | 99,33% | 98,42% |
+| 16 espectrais absolutas | 99,25% | 99,25% | 94,08% |
+| 12 espectrais ILR | 99,25% | 98,67% | 96,33% |
+| Formato + espectro (56) | 99,75% | 99,42% | 99,42% |
+
+### Velocidade e desempenho por classe
+
+A Regressão Logística com 16 features espectrais absolutas obteve 50,0% ao deixar 10 Hz de fora, 70,0% em 20 Hz, 84,0% em 30 Hz e 64,67% em 40 Hz. O resultado não cai abaixo do acaso em nenhuma rotação, mas a variação entre velocidades ainda é relevante.
+
+Na matriz agregada das quatro rotações, a revocação por classe dessa configuração foi:
+
+| Classe | Revocação |
+|---|---:|
+| Baseline | 99,5% |
+| Bearing | 75,0% |
+| Bearing+Unbalance | 50,0% |
+| Misalignment_NDE | 75,0% |
+| Unbalance_DE | 75,0% |
+| Unbalance_NDE | 28,5% |
+
+Isso melhora o problema anterior de `Unbalance_DE`, que tinha revocação de 0% nos experimentos temporais antigos. Porém, `Unbalance_NDE` continua difícil. A acurácia não deve ser interpretada sem a matriz e as métricas por classe. No conjunto ILR com Random Forest, por exemplo, a acurácia é 67%, mas `Bearing+Unbalance` quase nunca é reconhecida; por isso essa configuração não é recomendada apenas com base na acurácia.
+
+Para a seleção aninhada, a revocação pooled por classe é:
+
+| Classe | Random Forest + ILR | Hist Gradient Boosting + ILR | Regressão Logística + ILR |
+|---|---:|---:|---:|
+| Baseline | 100,0% | 84,0% | 100,0% |
+| Bearing | 99,5% | 46,0% | 61,5% |
+| Bearing+Unbalance | 0,5% | 36,0% | 25,0% |
+| Misalignment_NDE | 100,0% | 95,5% | 100,0% |
+| Unbalance_DE | 64,0% | 68,5% | 78,5% |
+| Unbalance_NDE | 38,0% | 34,0% | 28,0% |
+
+O CSV de comparação traz métricas macro por fold e também uma linha `pooled`, calculada sobre todas as previsões agregadas. Como F1 macro é não linear, a média dos F1 por velocidade não é igual ao F1 da matriz agregada. O dashboard e o relatório distinguem essas duas medidas.
+
+### Interpretação e limites
+
+- O ganho aponta para a distribuição de energia por frequência como uma descrição mais útil para a generalização entre rotações que as estatísticas temporais isoladas. É uma pista consistente com a EDA, não uma demonstração de uma assinatura mecânica universal.
+- Os novos resultados são comparações exploratórias nos mesmos quatro grupos de rotação já utilizados no desenvolvimento. Como examinamos esses grupos para encontrar boas representações, o melhor valor observado não é um teste externo independente. Para uma estimativa confirmatória, seria necessário avaliar uma nova velocidade, uma nova máquina ou uma aquisição independente.
+- Não há metadados de sessão suficientes para formar grupos de aquisição confiáveis; nenhum grupo de sessão foi inventado.
+- As rotações de 10 e 40 Hz ficam fora do intervalo usado para treinar em cada uma dessas divisões; 20 e 30 Hz ficam entre velocidades de treino. Por isso os quatro resultados devem permanecer visíveis, e não só a média.
+- Embora a rotina aninhada não consulte a rotação externa para selecionar as features, durante este trabalho já examinamos resultados exploratórios nos mesmos quatro grupos ao formular os candidatos espectrais. Portanto, os valores atuais são evidência de desenvolvimento, não um teste final totalmente cego. Uma nova aquisição, outra máquina ou outra velocidade é necessária para confirmação independente.
+- Os modelos e hiperparâmetros originais foram preservados. Não afirmamos que o maior número encontrado seja uma garantia de desempenho operacional.
+- O 5-fold continua sendo uma avaliação de medições em rotações conhecidas; não substitui o protocolo de rotação deixada de fora.
+
+### Arquivos novos e reprodução
+
+- `src/features.py`: extração do RMS espectral nas bandas usadas pela EDA.
+- `src/build_dataset.py`: opção para gerar uma tabela espectral separada, sem sobrescrever `features.csv`.
+- `src/compare_generalization.py`: comparação fixa dos seis conjuntos nos dois protocolos, com métricas por classe e matrizes.
+- `docs/comparison_generalization.csv`: resultados por modelo, protocolo e divisão.
+- `docs/class_metrics_generalization.csv`: precisão, revocação, F1 e suporte por classe.
+- `docs/confusion_matrices_generalization.csv`: matrizes agregadas e por rotação.
+- `docs/selected_features_by_rotation.csv`: conjunto escolhido dentro de cada treino externo.
+- `app/results_dashboard.py`: exibe os novos conjuntos, protocolos, matrizes e métricas por classe.
+
+Reproduza a tabela espectral e os resultados com:
+
+```bash
+python -m src.build_dataset --with-spectral
+python -m src.compare_generalization
+streamlit run app/results_dashboard.py
+```

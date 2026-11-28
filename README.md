@@ -5,7 +5,7 @@ Projeto para classificar falhas em uma máquina rotativa a partir de sinais de v
 - **Dados:** [Vibration signals of different fault conditions in a generic rotating machine](https://zenodo.org/records/14388093) (Zenodo): 1.200 sinais, 6 condições (Baseline e 5 tipos de falha) e 4 rotações (10, 20, 30 e 40 Hz).
 - **Modelos:** Random Forest, Gradient Boosting (`HistGradientBoostingClassifier`) e Regressão Logística, todos com hiperparâmetros padrão. O objetivo é comparar, não escolher um vencedor.
 - **Avaliação:** validação cruzada estratificada de 5 partes e "rotação deixada de fora" (treina em três rotações e testa na quarta).
-- **Resultado em uma frase:** os três modelos chegam a ~99% na validação cruzada, mas caem para 26–44% quando testados em uma rotação que não viram no treino. Detalhes em [`docs/relatorio.md`](docs/relatorio.md).
+- **Resultado em uma frase:** a avaliação temporal antiga chega a ~99% no 5-fold e 26–44% em rotações inéditas; uma comparação aninhada nova selecionou 12 contrastes espectrais ILR e ficou entre 60,7% e 67,0% no protocolo de rotação deixada de fora. Os novos valores ainda precisam de confirmação em outra aquisição. Detalhes em [`docs/relatorio.md`](docs/relatorio.md).
 
 ## Começar
 
@@ -37,6 +37,15 @@ Projeto para classificar falhas em uma máquina rotativa a partir de sinais de v
 
    Cada execução imprime a tabela de métricas e as matrizes de confusão, e salva a tabela em `docs/comparison_<conjunto>.csv`.
 
+6. Para reproduzir a comparação metodológica com features espectrais e conjuntos reduzidos, gere uma tabela separada e execute:
+
+   ```bash
+   python -m src.build_dataset --with-spectral
+   python -m src.compare_generalization
+   ```
+
+   Esse fluxo cria `data/processed/features_with_spectral.csv` sem substituir `features.csv` e salva resultados novos em `docs/comparison_generalization.csv`, `docs/confusion_matrices_generalization.csv`, `docs/class_metrics_generalization.csv` e `docs/selected_features_by_rotation.csv`. A comparação inclui as 64 features temporais, 40 de formato, um conjunto reduzido de 32, 16 espectrais absolutas, 12 contrastes espectrais ILR e formato + espectro. A rotação é usada para formar os grupos do protocolo B, mas não como preditora.
+
 Todos os comandos devem ser executados a partir da raiz do projeto, como módulo (`python -m src.<nome>`).
 
 Cada modelo também pode ser executado sozinho (`python -m src.random_forest`, `python -m src.hist_gradient_boosting`, `python -m src.logistic_regression`), o que imprime as métricas da validação cruzada de 5 partes. Para salvar um modelo treinado em `models/`, chame `build_model(save_model=True)` a partir de Python; o dashboard usa esse arquivo.
@@ -48,7 +57,8 @@ vibration-fault-classifier/
 ├── README.md
 ├── requirements.txt
 ├── app/
-│   └── dashboard.py            (dashboard Streamlit: classifica um CSV de features com um modelo salvo)
+│   ├── dashboard.py            (dashboard Streamlit: classifica um CSV de features com um modelo salvo)
+│   └── results_dashboard.py    (compara modelos, protocolos, rotações e métricas por classe)
 ├── data/
 │   ├── raw/                    (.lvm baixados; fora do Git)
 │   └── processed/              (features.csv gerado; fora do Git)
@@ -58,6 +68,10 @@ vibration-fault-classifier/
 │   ├── comparison_all.csv      (métricas: 64 features, sem rotation_hz)
 │   ├── comparison_shape.csv    (métricas: 40 features de formato)
 │   ├── comparison_all_with_hz.csv  (métricas: 64 features + rotation_hz)
+│   ├── comparison_generalization.csv (experimento comparativo temporal/espectral)
+│   ├── confusion_matrices_generalization.csv
+│   ├── class_metrics_generalization.csv
+│   ├── selected_features_by_rotation.csv
 │   └── figures/eda/            (figuras da EDA)
 ├── models/                     (modelos .joblib treinados; fora do Git)
 ├── notebooks/
@@ -69,6 +83,7 @@ vibration-fault-classifier/
     ├── load.py                 (lê um .lvm e adiciona as colunas type e rotation_hz)
     ├── features.py             (estatísticas de um sinal)
     ├── build_dataset.py        (monta e salva data/processed/features.csv)
+    ├── compare_generalization.py (compara features temporais/espectrais nos dois protocolos)
     ├── evaluate.py             (carga de X/y, 5-fold, rotação deixada de fora, features de formato)
     ├── random_forest.py        (Random Forest)
     ├── hist_gradient_boosting.py   (Gradient Boosting por histograma)
